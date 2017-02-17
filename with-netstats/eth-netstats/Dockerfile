@@ -1,4 +1,5 @@
-FROM iojs
+FROM node:7
+
 
 RUN git clone https://github.com/cubedro/eth-netstats
 RUN cd /eth-netstats && npm install
