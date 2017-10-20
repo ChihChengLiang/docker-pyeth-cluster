@@ -1,14 +1,9 @@
 FROM localethereum/client-python
 
 RUN apt-get update &&\
-    apt-get install -y curl git-core &&\
-    curl -sL https://deb.nodesource.com/setup | bash - &&\
-    apt-get update &&\
+    apt-get install -y curl &&\
+    curl -sL https://deb.nodesource.com/setup_7.x | bash - &&\
     apt-get install -y nodejs
-
-
-RUN apt-get update &&\
-    apt-get install -y build-essential
 
 RUN cd /root &&\
     git clone https://github.com/cubedro/eth-net-intelligence-api &&\
